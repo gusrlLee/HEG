@@ -13,9 +13,7 @@ namespace HEG {
     
     void Application::Run()
     {
-        while(true) 
-        {
-            printf("Hello my HEG engine!\n");
-        }
+
+        printf("Engine Running!\n");
     }
 }

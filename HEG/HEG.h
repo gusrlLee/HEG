@@ -1,3 +1,5 @@
 #pragma once
 
-#include "Application.h"
+#include "HEG/Log.h"
+
+#include "HEG/Application.h"
