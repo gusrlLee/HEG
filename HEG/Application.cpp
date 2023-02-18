@@ -3,7 +3,7 @@
 namespace HEG {
     Application::Application()
     {
-
+        
     }
 
     Application::~Application()

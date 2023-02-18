@@ -8,6 +8,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_library(HEG_API SHARED 
     Application.cpp
     Log.cpp
+    Window.cpp
 )
 
 target_link_libraries(HEG_API 
