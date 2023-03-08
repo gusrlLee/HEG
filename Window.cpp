@@ -33,9 +33,19 @@ namespace HREG
     {
         SDL_LockSurface( surface );
         uint8_t* pixelArr = (uint8_t*)surface->pixels;
-        pixelArr[y * surface->pitch + x * surface->format->BytesPerPixel + 0] = r;
-        pixelArr[y * surface->pitch + x * surface->format->BytesPerPixel + 1] = g;
-        pixelArr[y * surface->pitch + x * surface->format->BytesPerPixel + 2] = b;
+        for (int j=surface->h-1; j>=0; --j)
+        {
+            for (int i=0; i<surface->pitch; ++i)
+            {
+                auto r = double(i) / (surface->w - 1);
+                auto g = double(j) / (surface->h - 1);
+                auto b = 0.25;
+
+                pixelArr[j * surface->pitch + i * surface->format->BytesPerPixel + 0] = static_cast<int>(255.999 * r);
+                pixelArr[j * surface->pitch + i * surface->format->BytesPerPixel + 1] = static_cast<int>(255.999 * g);
+                pixelArr[j * surface->pitch + i * surface->format->BytesPerPixel + 2] = static_cast<int>(255.999 * b);
+            }
+        }
         SDL_UnlockSurface( surface );
     }
 
@@ -49,13 +59,9 @@ namespace HREG
             {
                 m_Running = false;
             }
-            if( m_Event.button.button == SDL_BUTTON_LEFT )
-            {
-                setPixel(m_Screen, x, y, 255, 0, 0);
-            } 
         } 
 
-
+        setPixel(m_Screen, x, y, 255, 0, 0);
     }
 
     void Window::Clear()
