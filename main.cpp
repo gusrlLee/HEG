@@ -17,6 +17,7 @@ void SetPixel(SDL_Surface* surface, int x, int y, uint8_t r, uint8_t g, uint8_t 
 
 int main( int argc, char* argv[] )
 {
+
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) 
     {
         spdlog::error("Failed to initialize the SDL\n");
