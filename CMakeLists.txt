@@ -11,6 +11,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 add_executable( ${PROJECT_NAME} 
     main.cpp 
     Application.cpp
+    Frame.cpp
 )
 
 target_link_libraries( ${PROJECT_NAME} 
