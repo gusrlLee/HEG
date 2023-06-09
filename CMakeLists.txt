@@ -12,6 +12,7 @@ add_executable( ${PROJECT_NAME}
     main.cpp 
     Application.cpp
     Frame.cpp
+    Tracer.cpp
 )
 
 target_link_libraries( ${PROJECT_NAME} 

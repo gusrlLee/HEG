@@ -1,3 +1,6 @@
+#ifndef __FRAME__
+#define __FRAME__
+
 #include "SDL2/SDL.h"
 #include "spdlog/spdlog.h"
 
@@ -30,3 +33,6 @@ private:
 
 
 }
+
+
+#endif

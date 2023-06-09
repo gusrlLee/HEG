@@ -17,10 +17,10 @@ Frame::~Frame()
     delete[] m_frame_data;
 }
 
-void Frame::Update(char data)
+void Frame::Update(char* data)
 {
-    std::memset(m_frame_data, data, m_width * m_height * m_channel * sizeof(char));
-    // std::memcpy(m_frame_data, data, m_width * m_height * m_channel * sizeof(Uint8));
+    // std::memset(m_frame_data, data, m_width * m_height * m_channel * sizeof(char));
+    std::memcpy(m_frame_data, data, m_width * m_height * m_channel * sizeof(Uint8));
 }
 
 
