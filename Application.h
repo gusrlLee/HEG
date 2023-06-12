@@ -22,8 +22,8 @@ private:
     SDL_Renderer* m_Renderer;
     SDL_Texture* m_Display;
 
-    HREG::Frame* m_Frame;
-    HREG::Tracer* m_Tracer;
+    Frame* m_Frame;
+    Tracer* m_Tracer;
     char* image_data;
     bool m_Is_Running;
 };

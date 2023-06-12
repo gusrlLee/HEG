@@ -1,7 +1,5 @@
 #include "Frame.h"
 
-namespace HREG 
-{
 // initialization 
 Frame::Frame(int width, int height, int channel)
 {
@@ -24,4 +22,3 @@ void Frame::Update(char* data)
 }
 
 
-} // namespace HREG

@@ -2,7 +2,6 @@
 
 #include <iostream>
 
-namespace HREG {
 
 class Input {
 
@@ -11,4 +10,3 @@ public:
 private:
 
 };
-}

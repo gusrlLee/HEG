@@ -30,8 +30,8 @@ void Application::Init( std::string window_name, int window_width, int window_he
         exit(-1);
     }
 
-    m_Frame = new HREG::Frame(window_width, window_height, 3);
-    m_Tracer = new HREG::Tracer();
+    m_Frame = new Frame(window_width, window_height, 3);
+    m_Tracer = new Tracer();
     m_Is_Running = true;
 }
 
